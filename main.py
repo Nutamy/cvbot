@@ -25,8 +25,8 @@ def send_text(message):
     elif message.text == 'Сертификаты':
         certif1 = open('1.jpg', 'rb')
         certif2 = open('2.jpg', 'rb')
-        certif1 = open('3.jpg', 'rb')
-        certif2 = open('4.jpg', 'rb')
+        certif3 = open('3.jpg', 'rb')
+        certif4 = open('4.jpg', 'rb')
         bot.send_photo(message.chat.id, certif1)
         bot.send_photo(message.chat.id, certif2)
         bot.send_photo(message.chat.id, certif3)
