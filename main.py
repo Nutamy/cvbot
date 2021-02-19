@@ -5,7 +5,12 @@ import requests
 
 app = FastAPI()
 
-bot = telebot.TeleBot('1602979123:AAG_TrU_eeQAdDDzDw8cymyYEtPFDeTtd_0')
+------------------------------------------
+# Укажите свой ТОКЕН!!!!
+bot = telebot.TeleBot('ВАШ ТОКЕН!!!')
+------------------------------------------
+
+
 # создаём клавиатуру бота
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True)
 
