@@ -152,7 +152,12 @@ import requests
 
 app = FastAPI()
 
-bot = telebot.TeleBot('1602979123:AAG_TrU_eeQAdDDzDw8cymyYEtPFDeTtd_0')
+------------------------------------------
+# Укажите свой ТОКЕН!!!!
+bot = telebot.TeleBot('ВАШ ТОКЕН!!!')
+------------------------------------------
+
+
 # создаём клавиатуру бота
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True)
 
@@ -172,8 +177,8 @@ def send_text(message):
     elif message.text == 'Сертификаты':
         certif1 = open('1.jpg', 'rb')
         certif2 = open('2.jpg', 'rb')
-        certif1 = open('3.jpg', 'rb')
-        certif2 = open('4.jpg', 'rb')
+        certif3 = open('3.jpg', 'rb')
+        certif4 = open('4.jpg', 'rb')
         bot.send_photo(message.chat.id, certif1)
         bot.send_photo(message.chat.id, certif2)
         bot.send_photo(message.chat.id, certif3)
@@ -188,4 +193,8 @@ def send_text(message):
     else:
         bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAMOYCkAAcOU8T-4VXdQ37mE7cTSX6nLAAKGAQACFkJrCi576oRhXPHGHgQ')
 
+<<<<<<< HEAD
 bot.polling() """
+=======
+bot.polling()
+>>>>>>> 3075903fe806f50bf99b0c8f3c53c948835e8a95
