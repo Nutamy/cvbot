@@ -4,7 +4,7 @@ import requests
 
 bot = telebot.TeleBot('1551417672:AAHpCgSQ-ipMD5RSqPjSPTjqUT5EBBZWA-8')
 app = FastAPI()
-keyboard1 = telebot.types.ReplyKeyboardMarkup(True)
+keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
 
 keyboard1.row('Обо мне', 'Успехи', 'Опыт работы', 'Образование', 'Навыки', 'Сертификаты', 'FastAPI Quote')
 
@@ -28,8 +28,8 @@ def send_text(message):
     elif message.text == 'Сертификаты':
         certif1 = open('4.jpg', 'rb')
         certif2 = open('5.jpg', 'rb')
-        certif3 = open('6.jpg', 'rb')
-        certif4 = open('7.jpg', 'rb')
+        certif3 = open('6.jpeg', 'rb')
+        certif4 = open('7.png', 'rb')
         certif5 = open('1.jpg', 'rb')
         bot.send_photo(message.chat.id, certif1)
         bot.send_photo(message.chat.id, certif2)
