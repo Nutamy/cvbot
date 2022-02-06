@@ -4,13 +4,33 @@ import requests
 
 bot = telebot.TeleBot('1551417672:AAHpCgSQ-ipMD5RSqPjSPTjqUT5EBBZWA-8')
 app = FastAPI()
-keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+# keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+# keyboard1.row('Обо мне', 'Успехи', 'Опыт работы', 'Образование', 'Навыки', 'Сертификаты', 'FastAPI Quote')
 
-keyboard1.row('Обо мне', 'Успехи', 'Опыт работы', 'Образование', 'Навыки', 'Сертификаты', 'FastAPI Quote')
+keyboard_1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+keyboard_2 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+keyboard_3 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+keyboard_4 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+
+button_1 = telebot.types.KeyboardButton('Обо мне')
+button_2 = telebot.types.KeyboardButton('Успехи')
+button_3 = telebot.types.KeyboardButton('Опыт работы')
+button_4 = telebot.types.KeyboardButton('Образование')
+button_5 = telebot.types.KeyboardButton('Навыки')
+button_6 = telebot.types.KeyboardButton('Сертификаты')
+button_7 = telebot.types.KeyboardButton('FastAPI Quote')
+
+keyboard_1.add(button_1, button_2)
+keyboard_2.add(button_3, button_4)
+keyboard_3.add(button_5, button_6)
+keyboard_4.add(button_7)
+
+
+
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Здравствуйте.Это бот-резюме расскажет обо мне, покажет мои сертификаты, и продемонстрирует крошечку мудрости.', reply_markup=keyboard1)
+    bot.send_message(message.chat.id, 'Здравствуйте.Это бот-резюме расскажет обо мне, моем образовании, опыте работы и покажет мои сертификаты.', reply_markup=keyboard1)
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
