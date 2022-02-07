@@ -2,7 +2,7 @@ import telebot
 from fastapi import FastAPI, Request
 import requests
 
-bot = telebot.TeleBot('1551417672:AAHpCgSQ-ipMD5RSqPjSPTjqUT5EBBZWA-8')
+bot = telebot.TeleBot('Token')
 app = FastAPI()
 # keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
 # keyboard1.row('Обо мне', 'Успехи', 'Опыт работы', 'Образование', 'Навыки', 'Сертификаты', 'FastAPI Quote')
